@@ -1,0 +1,17 @@
+package kr.co.ezenac.templatemethod02;
+
+public class PlayerTest {
+	
+	public static void main(String[] args) {
+		Player player = new Player();
+		player.play(1);
+		
+		PlayerLevel aLevel = new AdvancedLevel();	//업캐스팅
+		player.upgradeLevel(aLevel);
+		player.play(2);
+		
+		PlayerLevel sLevel = new SuperLevel();
+		player.upgradeLevel(sLevel);
+		player.play(3);
+	}
+}
